@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/middleware/submit-to-store",
+      "destination": "/api"
+    },
+    {
+      "source": "/health",
+      "destination": "/api"
+    }
+  ]
+}
