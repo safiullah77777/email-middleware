@@ -79,10 +79,11 @@ app.post('/middleware/submit-to-store', async (req, res) => {
   }
 });
 app.get('/', (req, res) => {
-  res.json({ message: `Hello World`,
+  res.json({ 
+    message: `Hello World`,
     url: process.env.VERCEL_URL,
     projectId: process.env.SANITY_PROJECT_ID,
-    dataset: process.env.SANITY_DATASET,
+    dataset: process.env.SANITY_DATASET || 'not set',
     token: process.env.SANITY_API_TOKEN ? '********' : 'not set',
    });
 });
