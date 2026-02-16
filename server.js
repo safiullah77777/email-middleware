@@ -82,8 +82,7 @@ app.get('/', (req, res) => {
   res.json({ 
     message: `Hello World`,
     url: process.env.VERCEL_URL,
-    domain: process.env.DOMAIN,
-    
+    domain: process.env.DOMAIN || 'not set',
     projectId: process.env.SANITY_PROJECT_ID,
     dataset: process.env.SANITY_DATASET || 'not set',
     token: process.env.SANITY_API_TOKEN ? '********' : 'not set',
